@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Complaint - JanVaani</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bullhorn"></i>
+                <span>Jan<span class="logo-highlight">Vaani</span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="complaint.html" class="active"><i class="fas fa-pen-alt"></i> File Complaint</a>
+                <a href="stats.html"><i class="fas fa-chart-bar"></i> Statistics</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Complaint Form -->
+    <section class="complaint-page">
+        <div class="complaint-container">
+            <h2><i class="fas fa-pen-alt"></i> File a Complaint</h2>
+            <p class="subtitle">Report an issue in Nallasopara, Virar, or Vasai</p>
+
+            <form id="complaintForm" onsubmit="return window.handleComplaintSubmit(event)">
+                <div class="form-group">
+                    <label for="city">Select City <span style="color:#e63946;">*</span></label>
+                    <select id="city" name="city" required>
+                        <option value="">-- Choose City --</option>
+                        <option value="Nallasopara">Nallasopara</option>
+                        <option value="Virar">Virar</option>
+                        <option value="Vasai">Vasai</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Complaint Category <span style="color:#e63946;">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">-- Select Category --</option>
+                        <option value="Road Damage">Road Damage / Potholes</option>
+                        <option value="Water Supply">Water Supply Issues</option>
+                        <option value="Drainage">Drainage / Sewage</option>
+                        <option value="Street Light">Street Light Problems</option>
+                        <option value="Garbage">Garbage Collection</option>
+                        <option value="Noise Pollution">Noise Pollution</option>
+                        <option value="Park Maintenance">Park Maintenance</option>
+                        <option value="Electricity">Electricity Issues</option>
+                        <option value="Public Transport">Public Transport</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Describe Your Complaint <span style="color:#e63946;">*</span></label>
+                    <textarea id="description" name="description" placeholder="Please describe the issue in detail — location, duration, severity..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Complaint
+                </button>
+            </form>
+
+            <div class="success-msg" id="successMessage"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <strong>JanVaani</strong> — People's Voice, Government's Action | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
