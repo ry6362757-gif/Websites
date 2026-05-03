@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - JanVaani | Area-wise Complaint Data</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bullhorn"></i>
+                <span>Jan<span class="logo-highlight">Vaani</span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="complaint.html"><i class="fas fa-pen-alt"></i> File Complaint</a>
+                <a href="stats.html" class="active"><i class="fas fa-chart-bar"></i> Statistics</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Stats Page Content -->
+    <section class="stats-page">
+        <div class="stats-container">
+            <div class="stats-hero">
+                <h1><i class="fas fa-chart-pie"></i> Area-wise Complaint Statistics</h1>
+                <p>Real-time data for <strong>Nallasopara, Virar & Vasai</strong></p>
+                <div class="color-legend" style="margin-top:16px;">
+                    <span class="legend-item"><span class="legend-dot red-dot"></span> Red = High Complaints</span>
+                    <span class="legend-item"><span class="legend-dot yellow-dot"></span> Yellow = Medium</span>
+                    <span class="legend-item"><span class="legend-dot blue-dot"></span> Blue = Low</span>
+                </div>
+            </div>
+
+            <!-- Heatmap Cards -->
+            <div class="heatmap-section">
+                <h2>📊 Complaint Density Heatmap</h2>
+                <div class="heatmap-grid">
+                    <div class="heatmap-card high" id="nallasoparaHeatmapCard">
+                        <h3><i class="fas fa-map-marker-alt"></i> Nallasopara</h3>
+                        <span class="complaint-count">486</span>
+                        <span class="complaint-label">Total Complaints</span>
+                        <div class="status-text">⚠ Urgent</div>
+                    </div>
+                    <div class="heatmap-card medium" id="virarHeatmapCard">
+                        <h3><i class="fas fa-map-marker-alt"></i> Virar</h3>
+                        <span class="complaint-count">325</span>
+                        <span class="complaint-label">Total Complaints</span>
+                        <div class="status-text">⚡ Moderate</div>
+                    </div>
+                    <div class="heatmap-card low" id="vasaiHeatmapCard">
+                        <h3><i class="fas fa-map-marker-alt"></i> Vasai</h3>
+                        <span class="complaint-count">178</span>
+                        <span class="complaint-label">Total Complaints</span>
+                        <div class="status-text">✅ Low</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Stats Table -->
+            <div class="stats-table-section">
+                <h2>📋 Complete Statistics Breakdown</h2>
+                <div style="overflow-x:auto;">
+                    <table class="stats-table">
+                        <thead>
+                            <tr>
+                                <th>City</th>
+                                <th>Total Complaints</th>
+                                <th>Resolved</th>
+                                <th>Pending</th>
+                                <th>Density %</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="statsTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- City Cards (same as homepage for consistency) -->
+            <div class="city-cards" style="margin-top:20px;">
+                <div class="city-card" id="nallasoparaCard">
+                    <div class="city-card-header">
+                        <h3><i class="fas fa-map-pin"></i> Nallasopara</h3>
+                        <span class="density-badge high-density" id="nallasoparaDensity">High Density</span>
+                    </div>
+                    <div class="city-card-body">
+                        <div class="density-visual">
+                            <div class="density-bar high" id="nallasoparaBar" style="width:78%;"></div>
+                        </div>
+                        <div class="city-stats-row">
+                            <div><strong id="nallasoparaTotal">486</strong><small>Total</small></div>
+                            <div><strong id="nallasoparaResolved">312</strong><small>Resolved</small></div>
+                            <div><strong id="nallasoparaPending">174</strong><small>Pending</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="city-card" id="virarCard">
+                    <div class="city-card-header">
+                        <h3><i class="fas fa-map-pin"></i> Virar</h3>
+                        <span class="density-badge medium-density" id="virarDensity">Medium Density</span>
+                    </div>
+                    <div class="city-card-body">
+                        <div class="density-visual">
+                            <div class="density-bar medium" id="virarBar" style="width:52%;"></div>
+                        </div>
+                        <div class="city-stats-row">
+                            <div><strong id="virarTotal">325</strong><small>Total</small></div>
+                            <div><strong id="virarResolved">241</strong><small>Resolved</small></div>
+                            <div><strong id="virarPending">84</strong><small>Pending</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="city-card" id="vasaiCard">
+                    <div class="city-card-header">
+                        <h3><i class="fas fa-map-pin"></i> Vasai</h3>
+                        <span class="density-badge low-density" id="vasaiDensity">Low Density</span>
+                    </div>
+                    <div class="city-card-body">
+                        <div class="density-visual">
+                            <div class="density-bar low" id="vasaiBar" style="width:28%;"></div>
+                        </div>
+                        <div class="city-stats-row">
+                            <div><strong id="vasaiTotal">178</strong><small>Total</small></div>
+                            <div><strong id="vasaiResolved">149</strong><small>Resolved</small></div>
+                            <div><strong id="vasaiPending">29</strong><small>Pending</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <strong>JanVaani</strong> — People's Voice, Government's Action | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
