@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JanVaani - People's Voice, Government's Action</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bullhorn"></i>
+                <span>Jan<span class="logo-highlight">Vaani</span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="complaint.html"><i class="fas fa-pen-alt"></i> File Complaint</a>
+                <a href="stats.html"><i class="fas fa-chart-bar"></i> Statistics</a>
+                <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i> Official Public Grievance Portal
+            </div>
+            <h1>Your Voice, <span class="gradient-text">Government's Action</span></h1>
+            <p>JanVaani bridges the gap between citizens and local government. Report issues in <strong>Nallasopara, Virar & Vasai</strong> and track real-time resolution progress with complete transparency.</p>
+            <div class="hero-buttons">
+                <a href="complaint.html" class="btn btn-primary">
+                    <i class="fas fa-plus-circle"></i> File a Complaint
+                </a>
+                <a href="stats.html" class="btn btn-secondary">
+                    <i class="fas fa-map-marked-alt"></i> View Area Stats
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalComplaints">1,247</span>
+                    <span class="stat-label">Total Complaints</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="resolvedCount">892</span>
+                    <span class="stat-label">Resolved</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="pendingCount">355</span>
+                    <span class="stat-label">In Progress</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-cities">
+            <span class="city-tag nallasopara">Nallasopara</span>
+            <span class="city-tag virar">Virar</span>
+            <span class="city-tag vasai">Vasai</span>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <h2>How JanVaani Works</h2>
+            <p>A simple 4-step process to get your voice heard</p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>1. File Complaint</h3>
+                <p>Submit your grievance with details, location, and supporting evidence like photos.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-sort-amount-up"></i></div>
+                <h3>2. Categorization</h3>
+                <p>Your complaint is automatically categorized and routed to the concerned department.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-tasks"></i></div>
+                <h3>3. Government Action</h3>
+                <p>Officials review and take necessary action. You receive real-time status updates.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>4. Resolution</h3>
+                <p>Once resolved, the complaint is marked complete. You can rate the response.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Highlight Cards -->
+    <section class="city-highlights">
+        <div class="section-header">
+            <h2>Our Coverage Areas</h2>
+            <p>Real-time complaint density across all three cities</p>
+        </div>
+        <div class="city-cards">
+            <div class="city-card" id="nallasoparaCard">
+                <div class="city-card-header">
+                    <h3><i class="fas fa-map-pin"></i> Nallasopara</h3>
+                    <span class="density-badge high-density" id="nallasoparaDensity">High Density</span>
+                </div>
+                <div class="city-card-body">
+                    <div class="density-visual">
+                        <div class="density-bar high" id="nallasoparaBar" style="width: 78%;"></div>
+                    </div>
+                    <div class="city-stats-row">
+                        <div><strong id="nallasoparaTotal">486</strong><small>Total</small></div>
+                        <div><strong id="nallasoparaResolved">312</strong><small>Resolved</small></div>
+                        <div><strong id="nallasoparaPending">174</strong><small>Pending</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="city-card" id="virarCard">
+                <div class="city-card-header">
+                    <h3><i class="fas fa-map-pin"></i> Virar</h3>
+                    <span class="density-badge medium-density" id="virarDensity">Medium Density</span>
+                </div>
+                <div class="city-card-body">
+                    <div class="density-visual">
+                        <div class="density-bar medium" id="virarBar" style="width: 52%;"></div>
+                    </div>
+                    <div class="city-stats-row">
+                        <div><strong id="virarTotal">325</strong><small>Total</small></div>
+                        <div><strong id="virarResolved">241</strong><small>Resolved</small></div>
+                        <div><strong id="virarPending">84</strong><small>Pending</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="city-card" id="vasaiCard">
+                <div class="city-card-header">
+                    <h3><i class="fas fa-map-pin"></i> Vasai</h3>
+                    <span class="density-badge low-density" id="vasaiDensity">Low Density</span>
+                </div>
+                <div class="city-card-body">
+                    <div class="density-visual">
+                        <div class="density-bar low" id="vasaiBar" style="width: 28%;"></div>
+                    </div>
+                    <div class="city-stats-row">
+                        <div><strong id="vasaiTotal">178</strong><small>Total</small></div>
+                        <div><strong id="vasaiResolved">149</strong><small>Resolved</small></div>
+                        <div><strong id="vasaiPending">29</strong><small>Pending</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="color-legend">
+            <span class="legend-item"><span class="legend-dot red-dot"></span> High (Red) - 60%+ complaint density</span>
+            <span class="legend-item"><span class="legend-dot yellow-dot"></span> Medium (Yellow) - 30-60% density</span>
+            <span class="legend-item"><span class="legend-dot blue-dot"></span> Low (Blue) - Below 30% density</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>About JanVaani</h2>
+        </div>
+        <div class="about-content">
+            <p>JanVaani (<strong>जनवाणी</strong>) means <em>"People's Voice"</em> in Hindi. We are a dedicated public grievance platform connecting citizens of <strong>Nallasopara, Virar, and Vasai</strong> directly with their local government bodies. Our mission is to ensure every complaint is heard, tracked, and resolved with complete transparency.</p>
+            <p>With color-coded area statistics, citizens and officials can instantly identify problem hotspots — <span class="text-red">Red</span> for high complaint areas needing urgent attention, <span class="text-yellow">Yellow</span> for moderate issues, and <span class="text-blue">Blue</span> for well-maintained zones.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-content">
+            <p><i class="fas fa-envelope"></i> support@janvaani.gov.in</p>
+            <p><i class="fas fa-phone"></i> Toll-Free: 1800-JAN-VAANI (1800-526-82264)</p>
+            <p><i class="fas fa-map-marker-alt"></i> Vasai-Virar Municipal Corporation, Maharashtra</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>JanVaani</strong> — People's Voice, Government's Action | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
